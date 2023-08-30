@@ -218,7 +218,7 @@ function PlasmicNewPage__RenderFunc(props: {
                       <React.Fragment>
                         {(() => {
                           try {
-                            return $ctx.fetchedData[0].name;
+                            return $ctx.fetchedData[2].name;
                           } catch (e) {
                             if (
                               e instanceof TypeError ||
@@ -238,7 +238,21 @@ function PlasmicNewPage__RenderFunc(props: {
                         sty.text__ljRl
                       )}
                     >
-                      {"Enter some text"}
+                      <React.Fragment>
+                        {(() => {
+                          try {
+                            return $ctx.fetchedData[2].data;
+                          } catch (e) {
+                            if (
+                              e instanceof TypeError ||
+                              e?.plasmicType === "PlasmicUndefinedDataError"
+                            ) {
+                              return "";
+                            }
+                            throw e;
+                          }
+                        })()}
+                      </React.Fragment>
                     </div>
                     <div
                       className={classNames(
@@ -265,14 +279,20 @@ function PlasmicNewPage__RenderFunc(props: {
                             platform={"nextjs"}
                           >
                             <React.Fragment>
-                              <span
-                                className={
-                                  "plasmic_default__all plasmic_default__span"
+                              {(() => {
+                                try {
+                                  return $ctx.fetchedData[2].describe;
+                                } catch (e) {
+                                  if (
+                                    e instanceof TypeError ||
+                                    e?.plasmicType ===
+                                      "PlasmicUndefinedDataError"
+                                  ) {
+                                    return "";
+                                  }
+                                  throw e;
                                 }
-                                style={{ fontWeight: 700 }}
-                              >
-                                {"test"}
-                              </span>
+                              })()}
                             </React.Fragment>
                           </p.PlasmicLink>
                         }
