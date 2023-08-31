@@ -80,7 +80,7 @@
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 35px;
-  text-decoration-line: line-through !important;
+  text-decoration-line: none !important;
   min-width: 0;
 }
 .text__ezYsJ {
@@ -91,6 +91,9 @@
   font-size: 35px;
   margin-bottom: 20px;
   margin-top: 30px;
-  text-decoration-line: underline !important;
+  text-decoration-line: none !important;
   min-width: 0;
+}
+.span {
+  text-decoration-line: none;
 }
