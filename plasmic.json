@@ -1775,19 +1775,6 @@
           "plumeType": "text-input"
         },
         {
-          "id": "1fpTsSSCiL49",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "oxby7mL3tramyYPU9d77Uw",
-          "renderModuleFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/index.tsx"
-          },
-          "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "D-70OYRHSE35",
           "name": "ArticleInfo2",
           "type": "managed",
@@ -2075,19 +2062,6 @@
           "componentType": "component"
         },
         {
-          "id": "kuSmgDqi4v",
-          "name": "NewPage",
-          "type": "managed",
-          "projectId": "oxby7mL3tramyYPU9d77Uw",
-          "renderModuleFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicNewPage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/new-page.tsx"
-          },
-          "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicNewPage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page"
-        },
-        {
           "id": "G_m2icAg_5",
           "name": "NewPage2",
           "type": "managed",
@@ -2097,6 +2071,32 @@
             "modulePath": "../pages/new-page-2.tsx"
           },
           "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicNewPage2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "1fpTsSSCiL49",
+          "name": "Homepage2",
+          "type": "managed",
+          "projectId": "oxby7mL3tramyYPU9d77Uw",
+          "renderModuleFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/home.tsx"
+          },
+          "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
+        },
+        {
+          "id": "kuSmgDqi4v",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "oxby7mL3tramyYPU9d77Uw",
+          "renderModuleFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
         }
