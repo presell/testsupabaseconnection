@@ -66,7 +66,7 @@ export const PlasmicNewPage__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewPage__OverridesType = {
   root?: p.Flex<"div">;
   httpRestApiFetcher?: p.Flex<typeof DataFetcher>;
-  link?: p.Flex<"a"> & Partial<LinkProps>;
+  span?: p.Flex<"span">;
 };
 
 export interface DefaultNewPageProps {}
@@ -331,19 +331,16 @@ function PlasmicNewPage__RenderFunc(props: {
                     <React.Fragment>
                       <React.Fragment>{""}</React.Fragment>
                       {
-                        <p.PlasmicLink
-                          data-plasmic-name={"link"}
-                          data-plasmic-override={overrides.link}
+                        <span
+                          data-plasmic-name={"span"}
+                          data-plasmic-override={overrides.span}
                           className={classNames(
                             projectcss.all,
-                            projectcss.a,
+                            projectcss.span,
                             projectcss.__wab_text,
                             projectcss.plasmic_default__inline,
-                            sty.link
+                            sty.span
                           )}
-                          component={Link}
-                          href={"https://www.google.com" as const}
-                          platform={"nextjs"}
                         >
                           <React.Fragment>
                             {(() => {
@@ -360,7 +357,7 @@ function PlasmicNewPage__RenderFunc(props: {
                               }
                             })()}
                           </React.Fragment>
-                        </p.PlasmicLink>
+                        </span>
                       }
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
@@ -376,9 +373,9 @@ function PlasmicNewPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "httpRestApiFetcher", "link"],
-  httpRestApiFetcher: ["httpRestApiFetcher", "link"],
-  link: ["link"]
+  root: ["root", "httpRestApiFetcher", "span"],
+  httpRestApiFetcher: ["httpRestApiFetcher", "span"],
+  span: ["span"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -386,7 +383,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   httpRestApiFetcher: typeof DataFetcher;
-  link: "a";
+  span: "span";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -450,7 +447,7 @@ export const PlasmicNewPage = Object.assign(
   {
     // Helper components rendering sub-elements
     httpRestApiFetcher: makeNodeComponent("httpRestApiFetcher"),
-    link: makeNodeComponent("link"),
+    span: makeNodeComponent("span"),
 
     // Metadata about props expected for PlasmicNewPage
     internalVariantProps: PlasmicNewPage__VariantProps,
