@@ -168,142 +168,207 @@ function PlasmicNewPage__RenderFunc(props: {
             sty.root
           )}
         >
-          {([2, 3, 4] ?? []).map((currentItem, currentIndex) => (
-            <DataFetcher
-              data-plasmic-name={"httpRestApiFetcher"}
-              data-plasmic-override={overrides.httpRestApiFetcher}
-              className={classNames("__wab_instance", sty.httpRestApiFetcher)}
-              dataName={"fetchedData" as const}
-              errorDisplay={
-                <ph.DataCtxReader>
-                  {$ctx => "Error fetching data"}
-                </ph.DataCtxReader>
-              }
-              headers={{
-                "Content-Type": "application/json",
-                Accept: "application/json",
-                Authorization:
-                  "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhY2ZzaWN3eWhlY3dhdnluY2lwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5Mjk1NzI1MiwiZXhwIjoyMDA4NTMzMjUyfQ.-ec9WA5C7_xsD2O1ByDSRInAGuIW54VPOVyslTh5a1s"
-              }}
-              key={currentIndex}
-              loadingDisplay={
-                <ph.DataCtxReader>{$ctx => "Loading..."}</ph.DataCtxReader>
-              }
-              method={"GET" as const}
-              noLayout={false}
-              url={(() => {
-                try {
-                  return "https://eacfsicwyhecwavyncip.supabase.co/rest/v1/test?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhY2ZzaWN3eWhlY3dhdnluY2lwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5Mjk1NzI1MiwiZXhwIjoyMDA4NTMzMjUyfQ.-ec9WA5C7_xsD2O1ByDSRInAGuIW54VPOVyslTh5a1s";
-                } catch (e) {
-                  if (
-                    e instanceof TypeError ||
-                    e?.plasmicType === "PlasmicUndefinedDataError"
-                  ) {
-                    return "https://api.github.com/users/plasmicapp/repos";
-                  }
-                  throw e;
-                }
-              })()}
-            >
+          <DataFetcher
+            data-plasmic-name={"httpRestApiFetcher"}
+            data-plasmic-override={overrides.httpRestApiFetcher}
+            className={classNames("__wab_instance", sty.httpRestApiFetcher)}
+            dataName={"fetchedData" as const}
+            errorDisplay={
               <ph.DataCtxReader>
-                {$ctx => (
-                  <React.Fragment>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__i4E5A
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $ctx.fetchedData[2].name;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ljRl
-                      )}
-                    >
-                      <React.Fragment>
-                        {(() => {
-                          try {
-                            return $ctx.fetchedData[2].data;
-                          } catch (e) {
-                            if (
-                              e instanceof TypeError ||
-                              e?.plasmicType === "PlasmicUndefinedDataError"
-                            ) {
-                              return "";
-                            }
-                            throw e;
-                          }
-                        })()}
-                      </React.Fragment>
-                    </div>
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ezYsJ
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <p.PlasmicLink
-                            data-plasmic-name={"link"}
-                            data-plasmic-override={overrides.link}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.a,
-                              projectcss.__wab_text,
-                              projectcss.plasmic_default__inline,
-                              sty.link
-                            )}
-                            component={Link}
-                            href={"https://www.google.com" as const}
-                            platform={"nextjs"}
-                          >
-                            <React.Fragment>
-                              {(() => {
-                                try {
-                                  return $ctx.fetchedData[2].describe;
-                                } catch (e) {
-                                  if (
-                                    e instanceof TypeError ||
-                                    e?.plasmicType ===
-                                      "PlasmicUndefinedDataError"
-                                  ) {
-                                    return "";
-                                  }
-                                  throw e;
-                                }
-                              })()}
-                            </React.Fragment>
-                          </p.PlasmicLink>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                  </React.Fragment>
-                )}
+                {$ctx => "Error fetching data"}
               </ph.DataCtxReader>
-            </DataFetcher>
-          ))}
+            }
+            headers={{
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              Authorization:
+                "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhY2ZzaWN3eWhlY3dhdnluY2lwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5Mjk1NzI1MiwiZXhwIjoyMDA4NTMzMjUyfQ.-ec9WA5C7_xsD2O1ByDSRInAGuIW54VPOVyslTh5a1s"
+            }}
+            loadingDisplay={
+              <ph.DataCtxReader>{$ctx => "Loading..."}</ph.DataCtxReader>
+            }
+            method={"GET" as const}
+            noLayout={false}
+            url={(() => {
+              try {
+                return "https://eacfsicwyhecwavyncip.supabase.co/rest/v1/test?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhY2ZzaWN3eWhlY3dhdnluY2lwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5Mjk1NzI1MiwiZXhwIjoyMDA4NTMzMjUyfQ.-ec9WA5C7_xsD2O1ByDSRInAGuIW54VPOVyslTh5a1s";
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return "https://api.github.com/users/plasmicapp/repos";
+                }
+                throw e;
+              }
+            })()}
+          >
+            <ph.DataCtxReader>
+              {$ctx => (
+                <React.Fragment>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___520Sk
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].line_through;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dO3H7
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].code;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__fhk6S
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].anchor;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__i4E5A
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].name;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ljRl
+                    )}
+                  >
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].describe;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()}
+                    </React.Fragment>
+                  </div>
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ezYsJ
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <p.PlasmicLink
+                          data-plasmic-name={"link"}
+                          data-plasmic-override={overrides.link}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.a,
+                            projectcss.__wab_text,
+                            projectcss.plasmic_default__inline,
+                            sty.link
+                          )}
+                          component={Link}
+                          href={"https://www.google.com" as const}
+                          platform={"nextjs"}
+                        >
+                          <React.Fragment>
+                            {(() => {
+                              try {
+                                return $ctx.fetchedData[0].data;
+                              } catch (e) {
+                                if (
+                                  e instanceof TypeError ||
+                                  e?.plasmicType === "PlasmicUndefinedDataError"
+                                ) {
+                                  return "";
+                                }
+                                throw e;
+                              }
+                            })()}
+                          </React.Fragment>
+                        </p.PlasmicLink>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                </React.Fragment>
+              )}
+            </ph.DataCtxReader>
+          </DataFetcher>
         </div>
       </div>
     </React.Fragment>

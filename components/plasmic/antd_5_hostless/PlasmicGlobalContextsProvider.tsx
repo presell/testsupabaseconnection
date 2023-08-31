@@ -73,6 +73,16 @@ export default function GlobalContextsProvider(
           ? antdConfigProviderProps.lineWidth!
           : (1 as const)
       }
+      loadingText={
+        antdConfigProviderProps && "loadingText" in antdConfigProviderProps
+          ? antdConfigProviderProps.loadingText!
+          : undefined
+      }
+      removeLoading={
+        antdConfigProviderProps && "removeLoading" in antdConfigProviderProps
+          ? antdConfigProviderProps.removeLoading!
+          : undefined
+      }
       sizeStep={
         antdConfigProviderProps && "sizeStep" in antdConfigProviderProps
           ? antdConfigProviderProps.sizeStep!

@@ -15,11 +15,9 @@ export interface GlobalContextsProviderProps {
   cmsCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof CmsCredentialsProvider>, "children">
   >;
-
   wordpressProviderProps?: Partial<
     Omit<React.ComponentProps<typeof WordpressProvider>, "children">
   >;
-
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
@@ -121,6 +119,17 @@ export default function GlobalContextsProvider(
             antdConfigProviderProps && "lineWidth" in antdConfigProviderProps
               ? antdConfigProviderProps.lineWidth!
               : (1 as const)
+          }
+          loadingText={
+            antdConfigProviderProps && "loadingText" in antdConfigProviderProps
+              ? antdConfigProviderProps.loadingText!
+              : undefined
+          }
+          removeLoading={
+            antdConfigProviderProps &&
+            "removeLoading" in antdConfigProviderProps
+              ? antdConfigProviderProps.removeLoading!
+              : undefined
           }
           sizeStep={
             antdConfigProviderProps && "sizeStep" in antdConfigProviderProps
