@@ -2099,6 +2099,19 @@
           "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicHomepage.module.css",
           "scheme": "blackbox",
           "componentType": "page"
+        },
+        {
+          "id": "UF8xtwxUYoFs",
+          "name": "NewPage",
+          "type": "managed",
+          "projectId": "oxby7mL3tramyYPU9d77Uw",
+          "renderModuleFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicNewPage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page.tsx"
+          },
+          "cssFilePath": "plasmic/copy_of_feed_presell_ai/PlasmicNewPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page"
         }
       ],
       "icons": [

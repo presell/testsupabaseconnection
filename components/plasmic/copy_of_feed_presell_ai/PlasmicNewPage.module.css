@@ -21,79 +21,61 @@
 .root > * {
   grid-column: 4;
 }
-.httpRestApiFetcher:global(.__wab_instance) {
-  width: 825px;
+.freeBox__fDmw {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
   max-width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  padding: 8px;
+}
+.text__m1Bvb {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
+}
+.img {
+  position: relative;
   object-fit: cover;
-  position: relative;
-  justify-self: flex-start;
+  max-width: 100%;
 }
-.text___520Sk {
+.img > picture > img {
+  object-fit: cover;
+}
+.img > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+.freeBox___0958P {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  grid-column-start: 1 !important;
+  grid-column-end: -1 !important;
+  padding: 8px;
+}
+.text__cmEWh {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 35px;
-  font-style: normal;
   min-width: 0;
 }
-.text__dO3H7 {
+.text__k4Pzo {
   position: relative;
   width: 100%;
   height: auto;
   max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 35px;
-  font-style: normal;
   min-width: 0;
-}
-.text__fhk6S {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 35px;
-  font-style: normal;
-  min-width: 0;
-}
-.text__i4E5A {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-size: 35px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-style: normal;
-  min-width: 0;
-}
-.text__ljRl {
-  position: relative;
-  width: 100%;
-  height: 78px;
-  max-width: 100%;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 35px;
-  text-decoration-line: none !important;
-  min-width: 0;
-}
-.text__ezYsJ {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-size: 35px;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  text-decoration-line: none !important;
-  min-width: 0;
-}
-.span {
-  text-decoration-line: none;
 }
