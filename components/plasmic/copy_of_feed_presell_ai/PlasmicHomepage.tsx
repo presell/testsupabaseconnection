@@ -253,21 +253,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__dO3H7
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
-                        try {
-                          return $ctx.fetchedData[0].code;
-                        } catch (e) {
-                          if (
-                            e instanceof TypeError ||
-                            e?.plasmicType === "PlasmicUndefinedDataError"
-                          ) {
-                            return "";
-                          }
-                          throw e;
+                  <React.Fragment>
+                  <div dangerouslySetInnerHTML={{
+                    __html: (() => {
+                      try {
+                        return $ctx.fetchedData[0].code;
+                      } catch (e) {
+                        if (
+                          e instanceof TypeError ||
+                          e?.plasmicType === "PlasmicUndefinedDataError"
+                        ) {
+                          return "";
                         }
-                      })()}
-                    </React.Fragment>
+                        throw e;
+                      }
+                    })()
+                  }} />
+                </React.Fragment>
+
                   </div>
                   <div
                     className={classNames(
@@ -277,7 +280,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                      {(() => {
+                    <div dangerouslySetInnerHTML={{
+                    __html: (() => {
                         try {
                           return $ctx.fetchedData[0].anchor;
                         } catch (e) {
@@ -289,7 +293,8 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
+                      })()
+                    }} />
                     </React.Fragment>
                   </div>
                   <div
@@ -300,7 +305,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                      {(() => {
+                    <div dangerouslySetInnerHTML={{
+                    __html: (() => {
                         try {
                           return $ctx.fetchedData[0].name;
                         } catch (e) {
@@ -312,7 +318,8 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
+                      })()
+                    }} />
                     </React.Fragment>
                   </div>
                   <div
@@ -323,7 +330,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                      {(() => {
+                    <div dangerouslySetInnerHTML={{
+                    __html: (() => {
                         try {
                           return $ctx.fetchedData[0].describe;
                         } catch (e) {
@@ -335,7 +343,8 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
+                      })()
+                    }} /> 
                     </React.Fragment>
                   </div>
                   <div
@@ -360,7 +369,8 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <React.Fragment>
-                            {(() => {
+                          <div dangerouslySetInnerHTML={{
+                    __html: (() => {
                               try {
                                 return $ctx.fetchedData[0].data;
                               } catch (e) {
@@ -372,7 +382,8 @@ function PlasmicHomepage__RenderFunc(props: {
                                 }
                                 throw e;
                               }
-                            })()}
+                            })()
+                          }} />
                           </React.Fragment>
                         </span>
                       }
