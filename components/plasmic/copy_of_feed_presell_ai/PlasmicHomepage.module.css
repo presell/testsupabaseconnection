@@ -36,7 +36,8 @@
   margin-top: 30px;
   margin-bottom: 20px;
   font-size: 35px;
-  font-style: normal;
+  font-style: italic;
+  text-decoration-line: underline !important;
   min-width: 0;
 }
 .text__dO3H7 {

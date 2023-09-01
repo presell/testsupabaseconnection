@@ -213,24 +213,10 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text___520Sk
                     )}
                   >
-                   <div
-                        dangerouslySetInnerHTML={{
-                          __html: (() => {  
-                   
-                              
+                    <React.Fragment>
+                      {(() => {
                         try {
-                      return $ctx.fetchedData[0].line_through;
-
-                      
-                          //  var tt = $ctx.fetchedData[0].line_through;
-                          //  console.log(tt);
-                          //  console.log(tt.toString( ));
-                        //   var convertedContentt = tt.replace(/&lt;b&gt;/g, "<s>").replace(/&lt;\/b&gt;/g, "</s>");
-                        //   // var convertedContentt = tt.replace(/<s>(.*?)<\/s>/g, "<s>$1</s>");
-                          
-                        //  // .replace(/<code>(.*?)<\/code>/g, "<code>$1</code>");
-                        //   return convertedContentt;
-                           
+                          return $ctx.fetchedData[0].line_through;
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -240,11 +226,8 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                     
-                     
-                     })()
-                    }}
-                  />
+                      })()}
+                    </React.Fragment>
                   </div>
                   <div
                     className={classNames(
@@ -253,24 +236,21 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__dO3H7
                     )}
                   >
-                  <React.Fragment>
-                  <div dangerouslySetInnerHTML={{
-                    __html: (() => {
-                      try {
-                        return $ctx.fetchedData[0].code;
-                      } catch (e) {
-                        if (
-                          e instanceof TypeError ||
-                          e?.plasmicType === "PlasmicUndefinedDataError"
-                        ) {
-                          return "";
+                    <React.Fragment>
+                      {(() => {
+                        try {
+                          return $ctx.fetchedData[0].code;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
                         }
-                        throw e;
-                      }
-                    })()
-                  }} />
-                </React.Fragment>
-
+                      })()}
+                    </React.Fragment>
                   </div>
                   <div
                     className={classNames(
@@ -280,8 +260,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                    <div dangerouslySetInnerHTML={{
-                    __html: (() => {
+                      {(() => {
                         try {
                           return $ctx.fetchedData[0].anchor;
                         } catch (e) {
@@ -293,8 +272,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()
-                    }} />
+                      })()}
                     </React.Fragment>
                   </div>
                   <div
@@ -305,8 +283,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                    <div dangerouslySetInnerHTML={{
-                    __html: (() => {
+                      {(() => {
                         try {
                           return $ctx.fetchedData[0].name;
                         } catch (e) {
@@ -318,8 +295,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()
-                    }} />
+                      })()}
                     </React.Fragment>
                   </div>
                   <div
@@ -330,8 +306,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     )}
                   >
                     <React.Fragment>
-                    <div dangerouslySetInnerHTML={{
-                    __html: (() => {
+                      {(() => {
                         try {
                           return $ctx.fetchedData[0].describe;
                         } catch (e) {
@@ -343,8 +318,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()
-                    }} /> 
+                      })()}
                     </React.Fragment>
                   </div>
                   <div
@@ -369,8 +343,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           )}
                         >
                           <React.Fragment>
-                          <div dangerouslySetInnerHTML={{
-                    __html: (() => {
+                            {(() => {
                               try {
                                 return $ctx.fetchedData[0].data;
                               } catch (e) {
@@ -382,8 +355,7 @@ function PlasmicHomepage__RenderFunc(props: {
                                 }
                                 throw e;
                               }
-                            })()
-                          }} />
+                            })()}
                           </React.Fragment>
                         </span>
                       }
