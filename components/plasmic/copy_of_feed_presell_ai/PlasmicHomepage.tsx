@@ -213,10 +213,26 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text___520Sk
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
+                     <div
+                        dangerouslySetInnerHTML={{
+                          __html: (() => {  
+                   
+                              
                         try {
-                          return $ctx.fetchedData[0].line_through;
+                     // return $ctx.fetchedData[0].line_through;
+                      const data = $ctx.fetchedData[0].line_through;
+                      const regex = /\*\*(.*?)\*\*/g; // define the regular expression pattern
+                      const boldedTextheadd = data.replace(regex, '<b>$1</b>');
+                      const regexx = /__(.*?)__/g; // define the regular expression pattern
+                      const boldedTexthead = boldedTextheadd.replace(regexx, '<b>$1</b>');
+                      const regexxx = /\*(.*?)\*/g; // define the regular expression pattern
+                      const italic = boldedTexthead.replace(regexxx, '<i>$1</i>');
+                      const regexxxx = /_(.*?)_/g; // define the regular expression pattern
+                      const italicc = italic.replace(regexxxx, '<i>$1</i>');
+                      const replacedString = italicc.replace(/~~(.*?)~~/g, '<s>$1</s>');
+                      var replacedStringg = replacedString.replace(/```(.*?)```/g, '<code>$1</code>');
+                      return replacedStringg;
+                        
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -226,8 +242,11 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
-                    </React.Fragment>
+                     
+                     
+                     })()
+                    }}
+                  />
                   </div>
                   <div
                     className={classNames(
@@ -236,10 +255,26 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__dO3H7
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
+                    <div
+                        dangerouslySetInnerHTML={{
+                          __html: (() => {  
+                   
                         try {
-                          return $ctx.fetchedData[0].code;
+                          // return $ctx.fetchedData[0].code;
+                           const data = $ctx.fetchedData[0].code;
+                           const regex = /\*\*(.*?)\*\*/g; // define the regular expression pattern
+                           const boldedTextheadd = data.replace(regex, '<b>$1</b>');
+                           const regexx = /__(.*?)__/g; // define the regular expression pattern
+                           const boldedTexthead = boldedTextheadd.replace(regexx, '<b>$1</b>');
+                           const regexxx = /\*(.*?)\*/g; // define the regular expression pattern
+                           const italic = boldedTexthead.replace(regexxx, '<i>$1</i>');
+                           const regexxxx = /_(.*?)_/g; // define the regular expression pattern
+                           const italicc = italic.replace(regexxxx, '<i>$1</i>');
+                           const replacedString = italicc.replace(/~~(.*?)~~/g, '<s>$1</s>');
+                           var replacedStringg = replacedString.replace(/```(.*?)```/g, '<code>$1</code>');
+
+                           return replacedStringg;
+
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -249,8 +284,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
-                    </React.Fragment>
+                      })()
+                    }}
+                  />
                   </div>
                   <div
                     className={classNames(
@@ -259,10 +295,28 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__fhk6S
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
+                    <div
+                        dangerouslySetInnerHTML={{
+                          __html: (() => {  
+                   
                         try {
-                          return $ctx.fetchedData[0].anchor;
+                       
+                            var text = $ctx.fetchedData[0].anchor;
+                            var match = text.match(/\[(.*?)\]\((.*?)\)/); // Match [text](url)
+                            
+                            if (match && match.length === 3) {
+                                var anchorText = match[1];
+                                var anchorUrl = match[2];
+                               
+                                var anchorElement = document.createElement("a");
+                                anchorElement.href = anchorUrl;
+                                anchorElement.textContent = anchorText;
+                               
+                                var onlyurlhead =  '<a href="' + anchorUrl + '" style="color:#4896fa;text-decoration: underline #4896FA 1px;">' + anchorText + '</a>';
+                                return onlyurlhead;
+                            }
+                        
+
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -272,8 +326,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
-                    </React.Fragment>
+                      })()
+                    }}
+                  />
                   </div>
                   <div
                     className={classNames(
@@ -282,10 +337,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__i4E5A
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: (() => {  
                         try {
-                          return $ctx.fetchedData[0].name;
+                         // return $ctx.fetchedData[0].name;
+                         const data = $ctx.fetchedData[0].name;
+                         const regex = /\*\*(.*?)\*\*/g; // define the regular expression pattern
+                         const boldedTextheadd = data.replace(regex, '<b>$1</b>');
+                         const regexx = /__(.*?)__/g; // define the regular expression pattern
+                         const boldedTexthead = boldedTextheadd.replace(regexx, '<b>$1</b>');
+                         const regexxx = /\*(.*?)\*/g; // define the regular expression pattern
+                         const italic = boldedTexthead.replace(regexxx, '<i>$1</i>');
+                         const regexxxx = /_(.*?)_/g; // define the regular expression pattern
+                         const italicc = italic.replace(regexxxx, '<i>$1</i>');
+                         const replacedString = italicc.replace(/~~(.*?)~~/g, '<s>$1</s>');
+                         var replacedStringg = replacedString.replace(/```(.*?)```/g, '<code>$1</code>');
+                         return replacedStringg;
+
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -295,8 +364,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
-                    </React.Fragment>
+                      })()
+                    }}
+                  />
                   </div>
                   <div
                     className={classNames(
@@ -305,10 +375,24 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty.text__ljRl
                     )}
                   >
-                    <React.Fragment>
-                      {(() => {
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: (() => {  
                         try {
-                          return $ctx.fetchedData[0].describe;
+                        
+                         const data = $ctx.fetchedData[0].describe;
+                         const regex = /\*\*(.*?)\*\*/g; // define the regular expression pattern
+                         const boldedTextheadd = data.replace(regex, '<b>$1</b>');
+                         const regexx = /__(.*?)__/g; // define the regular expression pattern
+                         const boldedTexthead = boldedTextheadd.replace(regexx, '<b>$1</b>');
+                         const regexxx = /\*(.*?)\*/g; // define the regular expression pattern
+                         const italic = boldedTexthead.replace(regexxx, '<i>$1</i>');
+                         const regexxxx = /_(.*?)_/g; // define the regular expression pattern
+                         const italicc = italic.replace(regexxxx, '<i>$1</i>');
+                         const replacedString = italicc.replace(/~~(.*?)~~/g, '<s>$1</s>');
+                         var replacedStringg = replacedString.replace(/```(.*?)```/g, '<code>$1</code>');
+                         return replacedStringg;
+
                         } catch (e) {
                           if (
                             e instanceof TypeError ||
@@ -318,8 +402,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           throw e;
                         }
-                      })()}
-                    </React.Fragment>
+                      })()
+                    }}
+                  />
                   </div>
                   <div
                     className={classNames(
@@ -342,21 +427,36 @@ function PlasmicHomepage__RenderFunc(props: {
                             sty.span
                           )}
                         >
-                          <React.Fragment>
-                            {(() => {
-                              try {
-                                return $ctx.fetchedData[0].data;
-                              } catch (e) {
-                                if (
-                                  e instanceof TypeError ||
-                                  e?.plasmicType === "PlasmicUndefinedDataError"
-                                ) {
-                                  return "";
-                                }
-                                throw e;
-                              }
-                            })()}
-                          </React.Fragment>
+                          <div
+                      dangerouslySetInnerHTML={{
+                        __html: (() => {  
+                        try {
+
+                         const data = $ctx.fetchedData[0].data;
+                         const regex = /\*\*(.*?)\*\*/g; // define the regular expression pattern
+                         const boldedTextheadd = data.replace(regex, '<b>$1</b>');
+                         const regexx = /__(.*?)__/g; // define the regular expression pattern
+                         const boldedTexthead = boldedTextheadd.replace(regexx, '<b>$1</b>');
+                         const regexxx = /\*(.*?)\*/g; // define the regular expression pattern
+                         const italic = boldedTexthead.replace(regexxx, '<i>$1</i>');
+                         const regexxxx = /_(.*?)_/g; // define the regular expression pattern
+                         const italicc = italic.replace(regexxxx, '<i>$1</i>');
+                         const replacedString = italicc.replace(/~~(.*?)~~/g, '<s>$1</s>');
+                         var replacedStringg = replacedString.replace(/```(.*?)```/g, '<code>$1</code>');
+                         return replacedStringg;
+
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return "";
+                          }
+                          throw e;
+                        }
+                      })()
+                    }}
+                  />
                         </span>
                       }
                       <React.Fragment>{""}</React.Fragment>
